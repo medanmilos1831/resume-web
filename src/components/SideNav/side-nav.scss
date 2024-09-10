@@ -1,0 +1,21 @@
+.side-nav {
+  .side-nav-item {
+    background-color: transparent;
+    .side-nav-item-icon {
+      svg {
+        stroke: white !important;
+      }
+    }
+    :hover{
+      .link-text{
+        color: #55e6a5 !important;
+      }
+      .side-nav-item-icon {
+         background-color: #55e6a5;
+         svg {
+          stroke: #222831 !important;
+        }
+      }
+    }
+  }
+}

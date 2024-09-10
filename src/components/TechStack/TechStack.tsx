@@ -71,7 +71,7 @@ const TechStack = () => {
             <div className="grid grid-cols-12">
               <div className="col-span-12 text-center">
                 <div className={`mb-3 ${classNameBaseAnimate}`}>
-                  <span className="uppercase text-mintGreen">Education</span>
+                  <span className="uppercase text-mintGreen">Tech stack</span>
                 </div>
                 <div className={`mb-7 ${classNameBaseAnimate}`}>
                   <h2 className="font-semibold text-white text-3xl sm:text-4xl">

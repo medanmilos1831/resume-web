@@ -16,6 +16,7 @@ import {
 
 import { ReactScrollProvider } from '../components/ReactScrollProvider';
 import { GsapProvider } from '../context';
+import '../styles.scss';
 
 const App = () => {
   return (
@@ -40,7 +41,7 @@ const App = () => {
         }}
       >
         <ReactEventHubProvider>
-          <div className="h-screen w-screen bg-black" style={{}}>
+          <div className="h-screen w-screen bg-black">
             <Waypoint>
               <ReactScrollProvider>
                 <div className="h-full relative">

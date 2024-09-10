@@ -11,13 +11,17 @@ import { ANCHORS } from '../SideNav/types';
 import { ReactScrollProvider } from '../ReactScrollProvider';
 import { WaypointPost } from '../WaypointPost/WaypointPost';
 import { ScrollServicePost } from '../ScrollServicePost/ScrollServicePost';
-
+import modalImage from '../../assets/modal-blog-img.png';
+import pubSubImage from '../../assets/pubsub.jpg';
+import storeImage from '../../assets/eventdrivenstore.jpg';
+import waypointImage from '../../assets/waypoint.avif';
+import scrollImage from '../../assets/scroll.webp';
 const CodeCreation = () => {
   const posts = [
     {
       id: 1,
       title: 'React modal provider',
-      imageUrl: '../../assets/modal-blog-img.png',
+      imageUrl: modalImage,
       date: 'Aug 29, 2024',
       datetime: '2024-08-29',
       ModalElement: ModalProviderPost,
@@ -25,7 +29,7 @@ const CodeCreation = () => {
     {
       id: 2,
       title: 'Building a Publish/Subscribe Service in React',
-      imageUrl: '../../assets/pubsub.jpg',
+      imageUrl: pubSubImage,
       date: 'Aug 29, 2024',
       datetime: '2024-08-29',
       ModalElement: PubSubPost,
@@ -33,7 +37,7 @@ const CodeCreation = () => {
     {
       id: 2,
       title: 'Pub/Sub Store for Efficient React State Management',
-      imageUrl: '../../assets/eventdrivenstore.jpg',
+      imageUrl: storeImage,
       date: 'Aug 29, 2024',
       datetime: '2024-08-29',
       ModalElement: EventStateStorePost,
@@ -41,7 +45,7 @@ const CodeCreation = () => {
     {
       id: 2,
       title: 'Waypoint Provider',
-      imageUrl: '../../assets/waypoint.avif',
+      imageUrl: waypointImage,
       date: 'Aug 29, 2024',
       datetime: '2024-08-29',
       ModalElement: WaypointPost,
@@ -49,7 +53,7 @@ const CodeCreation = () => {
     {
       id: 2,
       title: 'Waypoint Provider',
-      imageUrl: '../../assets/scroll.webp',
+      imageUrl: scrollImage,
       date: 'Aug 29, 2024',
       datetime: '2024-08-29',
       ModalElement: ScrollServicePost,

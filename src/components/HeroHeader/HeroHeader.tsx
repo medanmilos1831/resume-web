@@ -19,7 +19,6 @@ const HeroHeader = () => {
         id="headerSection"
         className="h-full w-full"
       >
-        pera
         <header className="h-full flex flex-col justify-center relative z-[1] px-4 sm:px-wrapper-padding py-8 sm:py-0">
           <div className="grid grid-cols-12">
             <div className="col-span-12 sm:col-span-8">

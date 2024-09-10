@@ -7,6 +7,7 @@ import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
 export default defineConfig({
   root: __dirname,
   cacheDir: './node_modules/.vite/resume-web',
+  base: '/resume-web/',
 
   server: {
     port: 4200,

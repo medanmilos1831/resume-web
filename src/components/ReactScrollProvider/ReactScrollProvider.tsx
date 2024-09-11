@@ -31,6 +31,9 @@ const useScroll = (scrollContainerName: string) => {
       ctx.scroll.scrollContainers[scrollContainerName].getAnchor(id),
     scrollToAnchor: (anchor: string) =>
       ctx.scroll.scrollContainers[scrollContainerName].scrollToAnchor(anchor),
+    scrollTo: (value: number) => {
+      ctx.scroll.scrollContainers[scrollContainerName].scrollTo(value);
+    },
   };
 };
 

@@ -53,7 +53,7 @@ const CodeCreation = () => {
     },
     {
       id: 5,
-      title: 'Waypoint Provider',
+      title: 'Scroll Provider',
       imageUrl: scrollImage,
       date: 'Aug 29, 2024',
       datetime: '2024-08-29',

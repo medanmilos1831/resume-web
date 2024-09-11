@@ -1,17 +1,20 @@
 import { ArrowRightDoubleIcon, ScrollTopProgressIcon } from './Icons';
-import { useWatchScroll } from './ReactScrollProvider';
+import { useScroll, useWatchScroll } from './ReactScrollProvider';
 
 const ScrollTopFloat = () => {
   const { scrollProgress, scrollPosition } = useWatchScroll('container');
-  // const { setScroll } = useScroll('container');
+  const { scrollTo } = useScroll('container');
   if (!scrollPosition) return;
   return (
     <div
-      // onClick={() =>
-      //   // setScroll({
-      //   //   top: 0,
-      //   // })
-      // }
+      onClick={
+        () => {
+          scrollTo(0);
+        }
+        // setScroll({
+        //   top: 0,
+        // })
+      }
       className="relative flex items-center justify-center"
     >
       <ScrollTopProgressIcon value={scrollProgress} />

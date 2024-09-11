@@ -113,6 +113,13 @@ class ScrollContainerService extends Observable {
       top: item - this.scrollContainerBoundingTop,
     });
   }
+
+  scrollTo(value: number) {
+    this.scrollContainer.scrollTo({
+      top: value,
+      behavior: 'smooth',
+    });
+  }
 }
 
 export { ScrollContainerService };

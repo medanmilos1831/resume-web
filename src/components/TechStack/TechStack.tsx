@@ -88,7 +88,7 @@ const TechStack = () => {
                       <div className="sm:block absolute left-0 top-1/2 transform -translate-x-[100%] sm:-translate-x-[120%] -translate-y-1/2">
                         <ArrowRightDoubleIcon />
                       </div>
-                      <h3 className="text-lg sm:text-xl font-bold text-white mb-3">
+                      <h3 className="text-lg sm:text-xl font-bold text-white">
                         {stack}
                       </h3>
                       {icon ? (
@@ -97,9 +97,9 @@ const TechStack = () => {
                         </div>
                       ) : null}
                     </div>
-                    <p className="text-silverGray">
+                    {/* <p className="text-silverGray">
                       Proficiency: {proficiency}
-                    </p>
+                    </p> */}
                   </div>
                 </div>
               ))}

@@ -1,4 +1,4 @@
-import myimage from '../../assets/about_img_2.jpeg';
+import myimage from '../../assets/cv.png';
 
 import { useGsapClient } from '../../context';
 import shapes from '../../assets/about_shapes.png';

@@ -44,7 +44,7 @@ const ParallaxBanner = ({
       }}
     >
       {/* progress line pointer */}
-      <ProgressLinePointer parallaxProgres={parallaxProgres} />
+      {/* <ProgressLinePointer parallaxProgres={parallaxProgres} /> */}
       {/* progress line pointer */}
       <div
         style={{

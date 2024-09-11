@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* You can add global styles to this file, and also import other style files */
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -14,6 +13,27 @@ body {
     &:hover{
         img{
             transform: scale(1.1);
+        }
+    }
+}
+
+.see-more{
+    position: relative;
+    ::after{
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -5px;
+        background-color: #55e6a5;
+        width: 0%;
+        height: 2px;
+        transition: .4s;
+    }
+    &:hover{
+        color: #55e6a5;
+        ::after{
+            width: 100% !important;
+            left: 0;
         }
     }
 }

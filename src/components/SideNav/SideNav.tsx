@@ -3,6 +3,7 @@ import { PropsWithChildren, createContext, useContext, useState } from 'react';
 import {
   AboutIcon,
   BlogIcon,
+  ContactIcon,
   EducationIcon,
   HomeIcon,
   JavaScriptIcon,
@@ -42,6 +43,11 @@ let links = [
   },
   {
     Component: BlogIcon,
+    text: 'blog',
+    anchor: ANCHORS.CODE_SECTION,
+  },
+  {
+    Component: ContactIcon,
     text: 'Contact',
     anchor: ANCHORS.CONTACT_SECTION,
   },

@@ -41,7 +41,7 @@ module.exports = {
         '16p': '15%',
         '100p': '100%',
         'wrapper-padding': '2rem',
-        'section-padding-space': '5rem',
+        'section-padding-space': '3rem',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

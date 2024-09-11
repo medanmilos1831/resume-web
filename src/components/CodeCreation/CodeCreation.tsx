@@ -16,6 +16,7 @@ import pubSubImage from '../../assets/pubsub.jpg';
 import storeImage from '../../assets/eventdrivenstore.jpg';
 import waypointImage from '../../assets/waypoint.avif';
 import scrollImage from '../../assets/scroll.webp';
+import { useFireEvent } from '../ReactEventHub';
 const CodeCreation = () => {
   const posts = [
     {
@@ -35,7 +36,7 @@ const CodeCreation = () => {
       ModalElement: PubSubPost,
     },
     {
-      id: 2,
+      id: 3,
       title: 'Pub/Sub Store for Efficient React State Management',
       imageUrl: storeImage,
       date: 'Aug 29, 2024',
@@ -43,7 +44,7 @@ const CodeCreation = () => {
       ModalElement: EventStateStorePost,
     },
     {
-      id: 2,
+      id: 4,
       title: 'Waypoint Provider',
       imageUrl: waypointImage,
       date: 'Aug 29, 2024',
@@ -51,7 +52,7 @@ const CodeCreation = () => {
       ModalElement: WaypointPost,
     },
     {
-      id: 2,
+      id: 5,
       title: 'Waypoint Provider',
       imageUrl: scrollImage,
       date: 'Aug 29, 2024',
@@ -61,9 +62,13 @@ const CodeCreation = () => {
   ];
   const { openModal, closeModal } = useModal();
   const { animate, classNameBaseAnimate } = useGsapClient();
+  const { fireEvent } = useFireEvent();
   return (
     <Waypoint.Item
       onEnter={() => {
+        fireEvent('enterSection', {
+          section: ANCHORS.CODE_SECTION,
+        });
         animate(`#${ANCHORS.CODE_SECTION}`);
       }}
       onLeave={({ item, entry }) => {}}
@@ -76,15 +81,10 @@ const CodeCreation = () => {
           <div className="py-section-padding-space bg-nightfall mb-10 px-5">
             <div className="grid grid-cols-12">
               <div className="col-span-12 text-center">
-                <div className={`mb-3 ${classNameBaseAnimate}`}>
-                  <span className="uppercase text-mintGreen">
-                    Code Creations
+                <div className={`mb-5 ${classNameBaseAnimate}`}>
+                  <span className="uppercase text-mintGreen text-3xl font-bold">
+                    Posts
                   </span>
-                </div>
-                <div className={`mb-7 ${classNameBaseAnimate}`}>
-                  <h2 className="font-semibold text-white text-3xl sm:text-4xl">
-                    Insights into My Code Creations
-                  </h2>
                 </div>
               </div>
             </div>

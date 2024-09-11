@@ -26,13 +26,10 @@ const Education = () => {
           <div className="py-section-padding-space bg-nightfall mb-10 px-5">
             <div className="grid grid-cols-12">
               <div className="col-span-12 text-center">
-                <div className={`mb-3 ${classNameBaseAnimate}`}>
-                  <span className="uppercase text-mintGreen">Education</span>
-                </div>
-                <div className={`mb-7 ${classNameBaseAnimate}`}>
-                  <h2 className="font-semibold text-white text-3xl sm:text-4xl">
-                    Foundations of Knowledge and Lifelong Learning
-                  </h2>
+                <div className={`mb-5 ${classNameBaseAnimate}`}>
+                  <span className="uppercase text-mintGreen text-3xl font-bold">
+                    Education
+                  </span>
                 </div>
               </div>
             </div>

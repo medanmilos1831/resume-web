@@ -1,4 +1,4 @@
-import myimage from '../../assets/about_img_2.jpg';
+import myimage from '../../assets/about_img_2.jpeg';
 
 import { useGsapClient } from '../../context';
 import shapes from '../../assets/about_shapes.png';
@@ -57,17 +57,14 @@ const AboutMe = () => {
           className="py-8 sm:py-section-padding-space px-4 sm:px-wrapper-padding zika"
           id="aboutSection"
         >
-          <div className={`mb-3 sm:mb-5 ${classNameBaseAnimate}`}>
-            <span className="uppercase font-semibold text-mintGreen">
-              About Me
-            </span>
-          </div>
-          <div className="mb-10 sm:mb-20">
-            <h2
-              className={`font-semibold text-white text-3xl sm:text-4xl ${classNameBaseAnimate}`}
-            >
-              Crafting stories through design and innovation
-            </h2>
+          <div className="grid grid-cols-12">
+            <div className="col-span-12 text-center">
+              <div className={`mb-5 ${classNameBaseAnimate}`}>
+                <span className="uppercase text-mintGreen text-3xl font-bold">
+                  About Me
+                </span>
+              </div>
+            </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-12 gap-y-8 sm:space-x-4 px-0 sm:px-4">
             <div className="col-span-12 sm:col-span-6">

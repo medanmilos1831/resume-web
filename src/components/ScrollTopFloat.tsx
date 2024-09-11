@@ -7,14 +7,7 @@ const ScrollTopFloat = () => {
   if (!scrollPosition) return;
   return (
     <div
-      onClick={
-        () => {
-          scrollTo(0);
-        }
-        // setScroll({
-        //   top: 0,
-        // })
-      }
+      onClick={() => scrollTo(0)}
       className="relative flex items-center justify-center"
     >
       <ScrollTopProgressIcon value={scrollProgress} />

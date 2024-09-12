@@ -1,5 +1,5 @@
 import img from '../../assets/headerimage.jpeg';
-import cv from '../../assets/cv.pdf';
+import cv from '../../assets/Milos_Medan_-_Frontend_Developer.pdf';
 import { useFireEvent } from '../ReactEventHub';
 import { ReactScrollProvider } from '../ReactScrollProvider';
 import { Waypoint } from '../ReactWaypoint';
@@ -38,7 +38,7 @@ const HeroHeader = () => {
               </div>
               <a
                 href={cv}
-                download="cv.pdf"
+                download="Milos_Medan_-_Frontend_Developer.pdf"
                 className="bg-mintGreen px-8 sm:px-12 font-bold py-4 sm:py-6 inline-block mt-8 sm:mt-16"
               >
                 Download CV

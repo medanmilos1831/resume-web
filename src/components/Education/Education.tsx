@@ -50,7 +50,6 @@ const Education = () => {
                     The School of Electrical and Computer Engineering of Applied
                     Studies
                   </p>
-                  <p className="text-silverGray mb-4">2007 - 2011</p>
                 </div>
               </div>
             </div>

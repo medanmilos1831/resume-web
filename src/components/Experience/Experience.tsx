@@ -6,6 +6,7 @@ import { ANCHORS } from '../SideNav/types';
 import { ReactScrollProvider } from '../ReactScrollProvider';
 import { useModal } from '../ModalProvider';
 import { Props } from 'react-modal';
+import rebellionCoverLetter from '../../assets/CoverLetter.pdf';
 
 const Experience = () => {
   const experienceData = [
@@ -133,6 +134,17 @@ const Experience = () => {
         'Working closely with back-end developers to integrate APIs.',
         'Ensuring cross-browser compatibility and responsiveness.',
       ],
+      coverLetter: () => {
+        return (
+          <a
+            href={rebellionCoverLetter}
+            download="syncStudioCoverLetter"
+            className="text-sm font-semibold leading-6 text-silverGray cursor-pointer see-more"
+          >
+            Read My Cover Letter <span aria-hidden="true">→</span>
+          </a>
+        );
+      },
     },
     {
       company: 'Movor',
@@ -216,6 +228,7 @@ const Experience = () => {
                         See more <span aria-hidden="true">→</span>
                       </span>
                     )}
+                    {exp.coverLetter && exp.coverLetter()}
                   </div>
                 </div>
               ))}

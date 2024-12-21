@@ -11,56 +11,36 @@ import { ANCHORS } from '../SideNav/types';
 import { ReactScrollProvider } from '../ReactScrollProvider';
 import { WaypointPost } from '../WaypointPost/WaypointPost';
 import { ScrollServicePost } from '../ScrollServicePost/ScrollServicePost';
-import modalImage from '../../assets/modal-blog-img.png';
+import serverdata from '../../assets/serverdata.png';
 import pubSubImage from '../../assets/pubsub.jpg';
 import storeImage from '../../assets/eventdrivenstore.jpg';
-import waypointImage from '../../assets/waypoint.avif';
-import scrollImage from '../../assets/scroll.webp';
+import eventImage from '../../assets/event.png';
+import scrollImage from '../../assets/scrolling-ux.jpg';
 import { useFireEvent } from '../ReactEventHub';
 const CodeCreation = () => {
   const posts = [
     {
       id: 1,
-      title: 'React modal provider',
-      imageUrl: modalImage,
-      date: 'Aug 29, 2024',
-      datetime: '2024-08-29',
-      ModalElement: ModalProviderPost,
+      title: 'Building a Decoupled Event Management Service in React',
+      imageUrl: eventImage,
+      medium:
+        'https://medium.com/@medanmilos1831/building-a-decoupled-event-management-service-in-react-5ff0fb4c8979',
     },
     {
       id: 2,
-      title: 'Building a Publish/Subscribe Service in React',
-      imageUrl: pubSubImage,
-      date: 'Aug 29, 2024',
-      datetime: '2024-08-29',
-      ModalElement: PubSubPost,
+      title: 'A Guide to Building Your Own Server State Management in React',
+      imageUrl: serverdata,
+      medium:
+        'https://medium.com/@medanmilos1831/a-guide-to-building-your-own-server-state-management-in-react-1603a746aace',
     },
     {
       id: 3,
-      title: 'Pub/Sub Store for Efficient React State Management',
-      imageUrl: storeImage,
-      date: 'Aug 29, 2024',
-      datetime: '2024-08-29',
-      ModalElement: EventStateStorePost,
-    },
-    {
-      id: 4,
-      title: 'Waypoint Provider',
-      imageUrl: waypointImage,
-      date: 'Aug 29, 2024',
-      datetime: '2024-08-29',
-      ModalElement: WaypointPost,
-    },
-    {
-      id: 5,
-      title: 'Scroll Provider',
+      title: 'Building a Scroll Management System from Scratch in React',
       imageUrl: scrollImage,
-      date: 'Aug 29, 2024',
-      datetime: '2024-08-29',
-      ModalElement: ScrollServicePost,
+      medium:
+        'https://medium.com/@medanmilos1831/building-a-scroll-management-system-from-scratch-in-react-b936745604eb',
     },
   ];
-  const { openModal, closeModal } = useModal();
   const { animate, classNameBaseAnimate } = useGsapClient();
   const { fireEvent } = useFireEvent();
   return (
@@ -91,12 +71,13 @@ const CodeCreation = () => {
             <div
               className={`mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3`}
             >
-              {posts.map(({ ModalElement, ...post }) => (
+              {posts.map((post) => (
                 <article
                   onClick={() => {
-                    openModal<Pick<Props, 'onRequestClose'>>(<ModalElement />, {
-                      onRequestClose: closeModal,
-                    });
+                    window.open(post.medium, '_blank');
+                    // openModal<Pick<Props, 'onRequestClose'>>(<ModalElement />, {
+                    //   onRequestClose: closeModal,
+                    // });
                   }}
                   key={post.id}
                   className={`blogpost relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80 ${classNameBaseAnimate}`}
@@ -109,11 +90,11 @@ const CodeCreation = () => {
                   <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" />
                   <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
 
-                  <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
+                  {/* <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
                     <time dateTime={post.datetime} className="mr-8">
                       {post.date}
                     </time>
-                  </div>
+                  </div> */}
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
                     <span className="absolute inset-0" />
                     {post.title}

@@ -1,22 +1,12 @@
-import { Props } from 'react-modal';
-
-import { useModal } from '../ModalProvider';
-
-import { useGsapClient } from '../../context';
-import { EventStateStorePost } from '../EventStateStorePost/EventStateStorePost';
-import { ModalProviderPost } from '../ModalProviderPost/ModalProviderPost';
-import { PubSubPost } from '../PubSubPost/PubSubPost';
-import { Waypoint } from '../ReactWaypoint';
-import { ANCHORS } from '../SideNav/types';
-import { ReactScrollProvider } from '../ReactScrollProvider';
-import { WaypointPost } from '../WaypointPost/WaypointPost';
-import { ScrollServicePost } from '../ScrollServicePost/ScrollServicePost';
-import serverdata from '../../assets/serverdata.png';
-import pubSubImage from '../../assets/pubsub.jpg';
-import storeImage from '../../assets/eventdrivenstore.jpg';
 import eventImage from '../../assets/event.png';
 import scrollImage from '../../assets/scrolling-ux.jpg';
+import serverdata from '../../assets/serverdata.png';
+import wizz from '../../assets/wizz.png';
+import { useGsapClient } from '../../context';
 import { useFireEvent } from '../ReactEventHub';
+import { ReactScrollProvider } from '../ReactScrollProvider';
+import { Waypoint } from '../ReactWaypoint';
+import { ANCHORS } from '../SideNav/types';
 const CodeCreation = () => {
   const posts = [
     {
@@ -39,6 +29,13 @@ const CodeCreation = () => {
       imageUrl: scrollImage,
       medium:
         'https://medium.com/@medanmilos1831/building-a-scroll-management-system-from-scratch-in-react-b936745604eb',
+    },
+    {
+      id: 4,
+      title: 'Create a Powerful, Scalable Wizard in React from Scratch',
+      imageUrl: wizz,
+      medium:
+        'https://medium.com/@medanmilos1831/create-a-powerful-scalable-wizard-in-react-from-scratch-795668018c5b',
     },
   ];
   const { animate, classNameBaseAnimate } = useGsapClient();

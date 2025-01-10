@@ -48,7 +48,7 @@ const CodeCreation = () => {
         });
         animate(`#${ANCHORS.CODE_SECTION}`);
       }}
-      onLeave={({ item, entry }) => {}}
+      onLeave={() => {}}
     >
       <ReactScrollProvider.ScrollAnchor
         id={ANCHORS.CODE_SECTION}
@@ -72,27 +72,52 @@ const CodeCreation = () => {
                 <article
                   onClick={() => {
                     window.open(post.medium, '_blank');
-                    // openModal<Pick<Props, 'onRequestClose'>>(<ModalElement />, {
-                    //   onRequestClose: closeModal,
-                    // });
                   }}
                   key={post.id}
-                  className={`blogpost relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80 ${classNameBaseAnimate}`}
+                  className={`h-full w-full blogpost relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80 ${classNameBaseAnimate}`}
                 >
-                  <img
-                    alt=""
-                    src={post.imageUrl}
-                    className="absolute inset-0 -z-10 h-full w-full object-cover"
-                  />
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      height: '100%',
+                      width: '100%',
+                    }}
+                  >
+                    <ReactScrollProvider.ParallaxBanner
+                      speed={40}
+                      scrollContainerName="container"
+                    >
+                      <div
+                        style={{
+                          position: 'relative',
+                          height: '100%',
+                          width: '100%',
+                        }}
+                      >
+                        <img
+                          alt=""
+                          src={post.imageUrl}
+                          className="absolute inset-0 -z-10 h-full w-full object-cover"
+                        />
+                        <div
+                          style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            height: '100%',
+                            background: 'rgba(0,0,0,.65)',
+                            width: '100%',
+                          }}
+                        ></div>
+                      </div>
+                    </ReactScrollProvider.ParallaxBanner>
+                  </div>
                   <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" />
                   <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
 
-                  {/* <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
-                    <time dateTime={post.datetime} className="mr-8">
-                      {post.date}
-                    </time>
-                  </div> */}
-                  <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
+                  <h3 className="mt-3 text-lg font-semibold leading-6 text-white z-10">
                     <span className="absolute inset-0" />
                     {post.title}
                   </h3>

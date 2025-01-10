@@ -1,11 +1,10 @@
 import {
   PropsWithChildren,
   useContext,
+  useEffect,
   useRef,
   useState,
-  useEffect,
 } from 'react';
-import { ProgressLinePointer } from './ProgressLinePointer';
 import { useWatchScroll } from '../ReactScrollProvider';
 import { ScrollContainerContext } from '../context/ScrollContainerContext';
 

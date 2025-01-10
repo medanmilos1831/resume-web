@@ -4,7 +4,6 @@ import { useFireEvent } from '../ReactEventHub';
 import { Waypoint } from '../ReactWaypoint';
 import { ANCHORS } from '../SideNav/types';
 import { ReactScrollProvider } from '../ReactScrollProvider';
-import { useModal } from '../ModalProvider';
 import { Props } from 'react-modal';
 import rebellionCoverLetter from '../../assets/CoverLetter.pdf';
 
@@ -161,7 +160,6 @@ const Experience = () => {
   ];
   const { fireEvent } = useFireEvent();
   const { animate, classNameBaseAnimate } = useGsapClient();
-  const { openModal, closeModal } = useModal();
   return (
     <Waypoint.Item
       onEnter={() => {
@@ -213,7 +211,7 @@ const Experience = () => {
                         <li key={i}>{resp}</li>
                       ))}
                     </ul>
-                    {exp.seeMore && (
+                    {/* {exp.seeMore && (
                       <span
                         className="text-sm font-semibold leading-6 text-silverGray cursor-pointer see-more"
                         onClick={() => {
@@ -227,7 +225,7 @@ const Experience = () => {
                       >
                         See more <span aria-hidden="true">→</span>
                       </span>
-                    )}
+                    )} */}
                     {exp.coverLetter && exp.coverLetter()}
                   </div>
                 </div>

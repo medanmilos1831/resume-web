@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* You can add global styles to this file, and also import other style files */
+.left-line{
+    position: relative;
+    border-left: 3px solid #18d26e;
+}
+
+.time-line{
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0%;
+        top: 0;
+        width: 15px;
+        height: 15px;
+        border: 1px solid #18d26e;
+        background-color: black;
+        transform: translateX(-8.6px);
+        z-index: 1;
+        border-radius: 100%;
+    }
+}
+
+
+@font-face {
+    font-family: 'Albert Sans';
+    src: url('./assets/AlbertSans-Regular.woff2') format('woff2'),
+         url('./assets/AlbertSans-Regular.woff') format('woff');
+    /* font-weight: 900; */
+  }
+
+  .image_link {
+    transform: scale(1);
+    transition: .2s;
+    /* background-color: green; */
+  }
+  
+  .image_link:hover {
+    transform: scale(1.05);
+  }
+
+  .see-more{
+    position: relative;
+    ::after{
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -5px;
+        background-color: #55e6a5;
+        width: 0%;
+        height: 2px;
+        transition: .4s;
+    }
+    &:hover{
+        color: #55e6a5;
+        ::after{
+            width: 100% !important;
+            left: 0;
+        }
+    }
+}

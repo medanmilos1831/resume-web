@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Albert Sans';
+    src: url('AlbertSans-Regular.eot');
+    src: url('AlbertSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('AlbertSans-Regular.woff2') format('woff2'),
+        url('AlbertSans-Regular.woff') format('woff'),
+        url('AlbertSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

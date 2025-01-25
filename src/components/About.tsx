@@ -32,7 +32,7 @@ const About = (props: any) => {
             {props.primary.about_title[0].text}
           </h2>
           {props.primary.about_content.map((item: any, index: number) => {
-            if (item.text === '') return <br />;
+            if (item.text === '') return <br key={index} />;
             return (
               <p
                 className="text-white text-sm sm:text-base md:text-lg lg:text-xl about_animate opacity-0 translate-y-full"

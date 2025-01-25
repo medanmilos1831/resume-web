@@ -69,6 +69,7 @@ const Landing = () => {
                   if (Component) {
                     return (
                       <WaypointItemWrapper
+                        key={i}
                         section={item.slice_type}
                         className={
                           item.slice_type === 'hero_header'

@@ -20,7 +20,7 @@ class IntersectionObserverService {
     };
   }
   options = {
-    threshold: 0.5,
+    threshold: 0.25,
   };
 }
 
